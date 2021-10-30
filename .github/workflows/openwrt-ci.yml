@@ -55,7 +55,7 @@ jobs:
           touch ./.config
           
           cat >> .config <<EOF
-          ONFIG_TARGET_mvebu=y
+          CONFIG_TARGET_mvebu=y
           CONFIG_TARGET_mvebu_cortexa9=y
           CONFIG_TARGET_mvebu_cortexa9_DEVICE_linksys_wrt1200ac=y
           EOF
