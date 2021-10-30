@@ -82,7 +82,7 @@ jobs:
           # EOF
 
           # USB3.0支持:
-          # cat >> .config <<EOF
+          cat >> .config <<EOF
           # CONFIG_PACKAGE_kmod-chaoskey is not set
           # CONFIG_PACKAGE_kmod-usb-acm is not set
           # CONFIG_PACKAGE_kmod-usb-atm is not set
