@@ -59,19 +59,16 @@ jobs:
           CONFIG_TARGET_mvebu_cortexa9=y
           CONFIG_TARGET_mvebu_cortexa9_DEVICE_linksys_wrt1200ac=y
           EOF
-
-          # 固件压缩:
+          
           cat >> .config <<EOF
           CONFIG_TARGET_IMAGES_GZIP=y
           EOF
-
-          # IPv6支持:
+          
           cat >> .config <<EOF
           CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
           CONFIG_PACKAGE_ipv6helper=y
           EOF
-
-          # 多文件系统支持:
+          
           # cat >> .config <<EOF
           # CONFIG_PACKAGE_kmod-fs-nfs=y
           # CONFIG_PACKAGE_kmod-fs-nfs-common=y
@@ -80,8 +77,7 @@ jobs:
           # CONFIG_PACKAGE_kmod-fs-ntfs=y
           # CONFIG_PACKAGE_kmod-fs-squashfs=y
           # EOF
-
-          # USB3.0支持:
+          
           cat >> .config <<EOF
           # CONFIG_PACKAGE_kmod-chaoskey is not set
           # CONFIG_PACKAGE_kmod-usb-acm is not set
@@ -157,8 +153,7 @@ jobs:
           # CONFIG_PACKAGE_kmod-usbip-server is not set
           # CONFIG_PACKAGE_kmod-usbmon is not set
           # EOF
-
-          # 常用LuCI插件选择:
+          
           cat >> .config <<EOF
           CONFIG_PACKAGE_luci-app-accesscontrol=y
           CONFIG_PACKAGE_luci-app-adblock=m
@@ -298,16 +293,14 @@ jobs:
           # CONFIG_PACKAGE_luci-app-xlnetacc is not set
           # CONFIG_PACKAGE_luci-app-zerotier is not set
           EOF
-
-          # LuCI主题:
+          
           cat >> .config <<EOF
           CONFIG_PACKAGE_luci-theme-argon=m
           CONFIG_PACKAGE_luci-theme-bootstrap=y
           CONFIG_PACKAGE_luci-theme-material=m
           CONFIG_PACKAGE_luci-theme-netgear=m
           EOF
-
-          # 常用软件包:
+          
           # cat >> .config <<EOF
           # CONFIG_PACKAGE_curl=y
           # CONFIG_PACKAGE_htop=y
@@ -317,14 +310,12 @@ jobs:
           # CONFIG_PACKAGE_vim-fuller=y
           # CONFIG_PACKAGE_wget=y
           # EOF
-
-          # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
+          
           cat >> .config <<EOF
           # CONFIG_TARGET_IMAGES_PAD is not set
           # CONFIG_VMDK_IMAGES is not set
           EOF
-
-
+          
           sed -i 's/^[ \t]*//g' ./.config
           make defconfig
 
