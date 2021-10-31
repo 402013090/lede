@@ -79,7 +79,7 @@ jobs:
           cat >> .config <<EOF
           CONFIG_PACKAGE_luci-app-accesscontrol=y
           CONFIG_PACKAGE_luci-app-adblock=m
-          CONFIG_PACKAGE_luci-app-adbyby-plus=m
+          CONFIG_PACKAGE_luci-app-adbyby-plus=y
           CONFIG_PACKAGE_luci-app-advanced-reboot=y
           # CONFIG_PACKAGE_luci-app-ahcp is not set
           # CONFIG_PACKAGE_luci-app-airplay2 is not set
@@ -119,7 +119,7 @@ jobs:
           # CONFIG_PACKAGE_luci-app-familycloud is not set
           CONFIG_PACKAGE_luci-app-filetransfer=y
           CONFIG_PACKAGE_luci-app-firewall=y
-          CONFIG_PACKAGE_luci-app-frpc=m
+          CONFIG_PACKAGE_luci-app-frpc=y
           # CONFIG_PACKAGE_luci-app-frps is not set
           # CONFIG_PACKAGE_luci-app-fwknopd is not set
           # CONFIG_PACKAGE_luci-app-guest-wifi is not set
